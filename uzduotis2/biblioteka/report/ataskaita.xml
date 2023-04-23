@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding='utf-8'?>
+<odoo>
+    <record id="ataskaita_uzsakymu_details" model="ir.actions.report">
+        <field name="name">Kontaktu uzsakymo ataskaita</field>
+        <field name="model">uzsakymas.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">biblioteka.report_uzsakymu_details_template</field>
+        <field name="report_file">biblioteka.report_uzsakymu_details</field>
+        <field name="binding_model_id" ref="model_uzsakymas_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

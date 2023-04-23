@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding='utf-8'?>
+<odoo>
+    <record id="view_uzsakymas_model_tree" model="ir.ui.view">
+        <field name="name">uzsakymas.model.tree</field>
+        <field name="model">uzsakymas.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="knyga" widget='many2many'/>
+                <field name="visu_knygu_pav"/>
+                <field name='partner'/>
+                <field name="isdavimo_data"/>
+                <field name="grazinimo_data"/> 
+                <field name="busena"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_uzsakymas_model_form" model="ir.ui.view">
+        <field name="name">uzsakymas.model.form</field>
+        <field name="model">uzsakymas.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="knyga" widget='many2many'/>
+                            <field name="partner" widget="res_partner_many2one"
+                                                     options='{"always_reload": True}'/>
+                        </group>
+                        <group>
+                            <field name="isdavimo_data"/>
+                            <field name="grazinimo_data"/>
+                            <field name="busena"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_uzsakymas_model" model="ir.actions.act_window">
+            <field name="name">Uzsakymas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">uzsakymas.model</field>
+            <field name="context">{}</field>
+            <field name='help' type='html'>
+                <p class="o_view_nocontent_smiling_face">
+                    Galite prideti uzsakyma
+                </p>
+            </field>
+    </record>
+</odoo>

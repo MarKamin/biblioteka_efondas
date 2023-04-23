@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding='utf-8'?>
+<odoo>
+    <menuitem id="menu_knyga_root"
+              name='Knygos'
+              sequence="0"/>
+
+    <menuitem id="menu_knyga_master"
+              name='Knygu sarasas'
+              action="action_knyga_model"
+              parent="menu_knyga_root"
+              sequence="0"/>
+
+    <menuitem id="menu_uzsakymai_master"
+              name='Uzsakymai'
+              action="action_uzsakymas_model"
+              parent="menu_knyga_root"
+              sequence="20"/>
+
+     <menuitem id="menu_uzsakymai"
+              name='Uzsakymai'
+              action="action_uzsakymas_model"
+              parent="menu_uzsakymai_master"
+              sequence="10"/>
+
+    <menuitem id="menu_uzsakymai_ataskaita"
+              name='Ataskaitos'
+              action="action_create_report_uzsakymai"
+              parent="menu_uzsakymai_master"
+              sequence="20"/>
+</odoo>

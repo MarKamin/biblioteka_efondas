@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+biblioteka.access_knyga_model,access_knyga_model,biblioteka.model_knyga_model,base.group_user,1,1,1,True
+biblioteka.access_zanras_model,access_zanras_model,biblioteka.model_zanras_model,base.group_user,1,1,1,True
+biblioteka.access_uzsakymas_model,access_uzsakymas_model,biblioteka.model_uzsakymas_model,base.group_user,1,1,1,True
+biblioteka.access_uzsakymas_report_wizard,access_uzsakymas_report_wizard,biblioteka.model_uzsakymas_report_wizard,base.group_user,1,1,1,True
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_uzsakymu_details_template">
+        <t t-call="web.html_container">
+            <table class="table table-condensed" style="border: 3px solid black !important;">
+                <thead>
+                    <h1>Kontakto knygu registraciju ataskaita</h1>
+                    <tr>
+                        <th>Knyga</th>
+                        <th>Busena</th>
+                        <th>Isdavimo/grazinimo datos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="uzsakymai" t-as="line">
+                        <tr>
+                            <td><span t-esc="line['visu_knygu_pav']"/></td>
+                            <td><span t-esc="line['busena']"/></td>
+                            <td>
+                                <span t-esc="line['isdavimo_data']"/> ||
+                                <span t-esc="line['grazinimo_data']"/>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding='utf-8'?>
+<odoo>
+    <record id="uzsakymai_report_view_form" model="ir.ui.view">
+        <field name="name">uzsakymas.report.wizard.form</field>
+        <field name="model">uzsakymas.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Sukurti nauja ataskaita">
+                <group>
+                    <!-- <field name="date_from"/>
+                    <field name="date_to"/> -->
+                    <field name="partner"/>
+                </group>
+                <footer>
+                    <button name="action_create_ataskaita" type="object" string="Sukurti" class="btn-primary"/>
+                    <button string="Cancel" class='btn-secondary' special="cancel"/>
+                </footer>
+            </form> 
+        </field>      
+    </record>
+ 
+    <record id="action_create_report_uzsakymai" model="ir.actions.act_window">
+        <field name="name">Sukurti ataskaita</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">uzsakymas.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="uzsakymai_report_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
