@@ -7,11 +7,11 @@
     'summary': """Bibliotekos valdymo programa""",
 
     'description': """
-        Projektų valdymo programa leidžia:
-            - a
-            - b
-            - c
-            - d
+        Bibliotekos valdymo programa leidžia:
+            - Uzregistruoti knyga
+            - Knygai priskirti statusa/uzsakyma
+            - Atspausdinti PDF ataskaita
+            - Issiusti priminima vartotojui apie grazinti veluojama knyga
     """,
 
     'author': "Marius Kaminskas",
